@@ -62,6 +62,69 @@ This shows that it is important to look at each lot individually to analyze, as 
 
 
 
+## T-Tests on Suspension Coils
+
+### Analysing the PSI for all Lots
+
+The following plot and t-test were created in order to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch.
+
+#### All Lots Plot
+
+![sample_table_plot](./Images/sample_table_plot.png)
 
 
 
+#### All Lots t-test
+
+
+![t_test_sample_table](./Images/t_test_sample_table.png)
+
+
+
+
+
+### Analysing the PSI by Lot Individually
+
+using the t.test() function and its subset() argument to determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch.
+
+
+#### Lot1
+
+Plot:
+
+![plot_lot1](./Images/plot_lot1.png)
+
+t-test:
+
+![t_test_lot1](./Images/t_test_lot1.png)
+
+
+#### Lot2 
+
+Plot:
+
+![plot_lot2](./Images/plot_lot2.png)
+
+
+t-test:
+
+![t_test_lot2](./Images/t_test_lot2.png)
+
+
+
+#### Lot3 
+
+Plot:
+
+![plot_lot3](./Images/plot_lot3.png)
+
+
+t-test:
+
+![t_test_lot3](./Images/t_test_lot3.png)
+
+
+
+
+
+Analysisng the p-value of each lot individually shows that none of the three lots have a statictical difference.
