@@ -1,6 +1,7 @@
 # Use the library() function to load the tidyverse package.
 library(tidyverse)
 
+# DELIVERABLE 1
 # Import and read in the MechaCar_mpg.csv file as a dataframe.
 MechaCar_mpg <- read.csv('MechaCar_mpg.csv') #import dataset
 
@@ -24,3 +25,8 @@ ggplot(MechaCar_mpg,aes(x=vehicle_weight, y=mpg))+geom_point()
 
 # Using the summary() function, determine the p-value and the r-squared value for the linear regression model.
 summary(lm(mpg ~ vehicle_length+vehicle_weight+spoiler_angle+ground_clearance+AWD,MechaCar_mpg))
+
+
+# DELIVERABLE 2
+# import and read in the Suspension_Coil.csv file as a table.
+MechaCar_mpg <- read.csv('MechaCar_mpg.csv') #import dataset
