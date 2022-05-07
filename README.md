@@ -71,6 +71,7 @@ The following plot and t-test were created in order to determine if the PSI acro
 
 #### All Lots t-test
 
+The data for all manufacturing lots containned 150 points which were all tested with a t-test as shown below:
 
 ![t_test_all_lots](./Images/t_test_all_lots.png)
 
@@ -85,29 +86,29 @@ using the t.test() function and its subset() argument to determine if the PSI fo
 
 #### Lot1
 
-t-test:
+The data for Lot1 was filter out from the original, so that it could be tested individually. Containing 50 data points, Lot1 was tested with a t-test as shown below:
 
 ![t_test_lot1](./Images/t_test_lot1.png)
+
+Taking in consideration the decided significance level of 0.05 for the p-value, the result of 1 tells that the Suspension Coil PSI for Lot1 doesn't have a statistical difference from the population mean of 1,500, meaning that this lot is acceptable to be used/sold.
 
 
 #### Lot2 
 
-t-test:
+
+The data for Lot2 was filter out from the original, so that it could be tested individually. Containing 50 data points, Lot2 was tested with a t-test as shown below:
 
 ![t_test_lot2](./Images/t_test_lot2.png)
 
-
+Taking in consideration the decided significance level of 0.05 for the p-value, the result of 0.6072 tells that the Suspension Coil PSI for Lot2 doesn't have a statistical difference from the population mean of 1,500, meaning that this lot is acceptable to be used/sold.
 
 #### Lot3 
 
-
-t-test:
+The data for Lot3 was filter out from the original, so that it could be tested individually. Containing 50 data points, Lot3 was tested with a t-test as shown below:
 
 ![t_test_lot3](./Images/t_test_lot3.png)
 
-
-
-Analysisng the p-value of each lot individually shows that none of the three lots have a statictical difference.
+Taking in consideration the decided significance level of 0.05 for the p-value, the result of 0.04168 tells that the Suspension Coil PSI for lot 3 have a statistical difference from the population mean of 1,500, meaning that that this lot should be rejected.
 
 
 ## Study Design: MechaCar vs Competition
