@@ -46,45 +46,23 @@ lot_summary <- Suspension_Coil %>% group_by(Manufacturing_Lot) %>%summarize(Mean
 
 
 # write an RScript using the t.test() function to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch.
-sample_table <- Suspension_Coil%>% sample_n(50) #randomly sample 50 data points
-plt <- ggplot(sample_table,aes(x=PSI)) #import dataset into ggplot2
-plt + geom_density() #visualize distribution using density plot
-
-t.test(sample_table$PSI,mu=mean(Suspension_Coil$PSI)) #compare sample vs
+base <- 1500
+t.test(Suspension_Coil$PSI,mu=base)
 
 # Next, write three more RScripts in your MechaCarChallenge.RScript using the t.test() function and its subset() argument to determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch.
 
 #lot 1
-lot1_table <- Suspension_Coil%>%filter(Manufacturing_Lot=='Lot1')
-
-sample_lot1_table <- lot1_table%>% sample_n(25) #randomly sample 18 data points
-plt1 <- ggplot(sample_lot1_table,aes(x=PSI)) #import dataset into ggplot2
-plt1 + geom_density() #visualize distribution using density plot
-
-
-t.test(sample_lot1_table$PSI,mu=mean(lot1_table$PSI)) #compare sample vs population
+lot1_table <- t.test(PSI~1,Suspension_Coil,mu=base,subset=Suspension_Coil["Manufacturing_Lot"]=="Lot1")
 
 
 # lot 2
-lot2_table <- Suspension_Coil%>%filter(Manufacturing_Lot=='Lot2')
-
-sample_lot2_table <- lot2_table%>% sample_n(25) #randomly sample 25 data points
-plt2 <- ggplot(sample_lot2_table,aes(x=PSI)) #import dataset into ggplot2
-plt2 + geom_density() #visualize distribution using density plot
-
-
-t.test(sample_lot2_table$PSI,mu=mean(lot2_table$PSI)) #compare sample vs population
+lot2_table <- t.test(PSI~1,coil,mu=standard,subset=coil["Manufacturing_Lot"]=="Lot2")
 
 
 #lot 3
-lot3_table <- Suspension_Coil%>%filter(Manufacturing_Lot=='Lot3')
-
-sample_lot3_table <- lot3_table%>% sample_n(25) #randomly sample 18 data points
-plt3 <- ggplot(sample_lot3_table,aes(x=PSI)) #import dataset into ggplot2
-plt3 + geom_density() #visualize distribution using density plot
+lot3_table <- t.test(PSI~1,Suspension_Coil,mu=standard,subset=Suspension_Coil["Manufacturing_Lot"]=="Lot3")
 
 
-t.test(sample_lot3_table$PSI,mu=mean(lot3_table$PSI)) #compare sample vs population 
 
 
 
