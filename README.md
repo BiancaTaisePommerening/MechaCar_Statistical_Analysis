@@ -64,14 +64,14 @@ This shows that it is important to look at each lot individually to analyze, as 
 
 ## T-Tests on Suspension Coils
 
-### Analysing the PSI for all Lots
+### Analyzing the PSI for all Lots
 
 The following plot and t-test were created in order to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch.
 
 
 #### All Lots t-test
 
-The data for all manufacturing lots containned 150 points which were all tested with a t-test as shown below:
+The data for all manufacturing lots contained 150 points which were all tested with a t-test as shown below:
 
 ![t_test_all_lots](./Images/t_test_all_lots.png)
 
@@ -79,7 +79,7 @@ The data for all manufacturing lots containned 150 points which were all tested 
 
 
 
-### Analysing the PSI by Lot Individually
+### Analyzing the PSI by Lot Individually
 
 using the t.test() function and its subset() argument to determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch.
 
@@ -113,9 +113,24 @@ Taking in consideration the decided significance level of 0.05 for the p-value, 
 
 ## Study Design: MechaCar vs Competition
 
-Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
-In your description, address the following questions:
-What metric or metrics are you going to test?
-What is the null hypothesis or alternative hypothesis?
-What statistical test would you use to test the hypothesis? And why?
-What data is needed to run the statistical test?
+This study design is intended to describe a scenario and a type of test that would be used when comparing a car from MechaCar and a competitor, adressing an aspect of the car that is possibily important for the consumer when buying one.
+
+### Metrics
+
+The chosen metrics to be tested are city and highway fuel efficiency.
+
+### Null vs Alternative Hypothesis
+
+The goal is to find out if the mpg performance of each car is equal or different, equal meaning null hypothesis and different meaning alternative hypothesis.
+
+### Statistical Test
+
+In order to find the overall performance of each SUV being tested, a 2 way t-test would be run using the mean of the city and highway mpg results.
+
+Another useful finding would be to run a 2 way t-test on each SUV, using a subset or filter on the type of scenario, to compare the cars against both their city and highway performance.
+
+### Dataset
+
+To test the defined metrics, two very similar SUVs would be picked, one from MechaCar and one from a competitor such as Nissan and test their fuel efficiency for city and highway, by running a sequence of tests on each one of them, where employees would drive each car on each of the presented scenarios multiple times and record the results for comparison.
+
+
