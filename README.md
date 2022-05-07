@@ -3,6 +3,7 @@ Statistics and R
 
 ## Project Overview
 
+The purpose of this project is to use the R programming language to to analyze a series of datasets from the automotive industry called MechaCar, where a series of statistical and hypothesis testings are performed.
 
 
 ## Linear Regression to Predict MPG
@@ -10,13 +11,9 @@ Statistics and R
 
 ### Multiple Linear Regression Model
 
-The multiple linear regression model below takes in 5 different variables, vehicle length, vehicle weight, spoiler angle, ground clearance, and AWD, against the mpg, in order to identify which variables can be used for prediction and which ones cannot.
+- The multiple linear regression model below takes in 5 different variables, vehicle length, vehicle weight, spoiler angle, ground clearance, and AWD, against the mpg, in order to identify which variables can be used for prediction and which ones cannot.
 
 ![linear_regression_model](./Images/linear_regression_model.png)
-
-Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
-
-- Based on the results, the variables vehicle_length and ground_clearance are the ones we could use to predict since they presented a non-random amount of variance to the mpg values, since they are above zero, while all the other ones are all 0 which means they are too random to use for prediction.
 
 
 ### Multiple Linear Regression Model Summary 
@@ -25,12 +22,15 @@ In order to identify if the slope of the linear model can be considered zero, th
 
 ![summary_lm](./Images/summary_lm.png)
 
-Is the slope of the linear model considered to be zero? Why or why not?
-- It cannot be considered zero, because we have some that are not zero. Which are the vehicle length and the ground clearance because the p-value showed that they are smaller than 0.05.
+- The slope of the linear model cannot be considered zero, because we have some that are not zero. Which are the vehicle length and the ground clearance because the p-value showed that they are smaller than 0.05.
+
+- By examining the p-value in the last column, the only factors that are significant and account for the non-random variance are vehicle_lengthy and ground_clearance, where the p-value is being based on the traditional 0.05 for significance.
+While the null hypothesis in linear regression assumes a value of 0 for the coefficient, the alternative hypothesis is not 0. So, the resulted p-values suggest they have none 0 coefficients.
 
 Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
-- It depends on which value is been considered enough to be used for predictability. For this case the Adjusted R-squared is 0.6825, which means that 68% of the variance of the mpg comes form the 5 variables that we tested and 32% is caused by unknown factors. 
-So, if a good model is considered to be 0.7 or 0.8, then the model we have does not predict the mpg of MechaCar prototypes effectively. On the other hand, if we say that the results are close enough and we accept that 33% is from unknown factors, then the results of our testes could be used.
+
+- It depends on which value is been considered enough to be used for predictability. For this case the Adjusted R-squared is 0.6825, which means that 68% of the variance of the mpg comes from the 5 variables that we tested and 32% is caused by unknown factors. 
+So, if a good model is considered to be 0.7 or 0.8, then the model we have does not predict the mpg of MechaCar prototypes effectively. On the other hand, if we say that the results are close enough and we accept the fact that 33% is from unknown factors, then the results of our testes could be used for predictability.
 
 
 ## Summary Statistics on Suspension Coils
@@ -60,8 +60,6 @@ This shows that it is important to look at each lot individually to analyze, as 
 
 
 
-
-
 ## T-Tests on Suspension Coils
 
 ### Analyzing the PSI for all Lots
@@ -74,8 +72,6 @@ The following plot and t-test were created in order to determine if the PSI acro
 The data for all manufacturing lots contained 150 points which were all tested with a t-test as shown below:
 
 ![t_test_all_lots](./Images/t_test_all_lots.png)
-
-
 
 
 
@@ -113,7 +109,7 @@ Taking in consideration the decided significance level of 0.05 for the p-value, 
 
 ## Study Design: MechaCar vs Competition
 
-This study design is intended to describe a scenario and a type of test that would be used when comparing a car from MechaCar and a competitor, adressing an aspect of the car that is possibily important for the consumer when buying one.
+This study design is intended to describe a scenario and a test type to be be used when comparing a car from MechaCar and a competitor, addressing an aspect of the car that is possibly important for the consumer when buying one.
 
 ### Metrics
 
@@ -132,5 +128,7 @@ Another useful finding would be to run a 2 way t-test on each SUV, using a subse
 ### Dataset
 
 To test the defined metrics, two very similar SUVs would be picked, one from MechaCar and one from a competitor such as Nissan and test their fuel efficiency for city and highway, by running a sequence of tests on each one of them, where employees would drive each car on each of the presented scenarios multiple times and record the results for comparison.
+
+
 
 
