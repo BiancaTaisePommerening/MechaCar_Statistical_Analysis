@@ -52,15 +52,16 @@ t.test(Suspension_Coil$PSI,mu=base)
 # Next, write three more RScripts in your MechaCarChallenge.RScript using the t.test() function and its subset() argument to determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch.
 
 #lot 1
-lot1_table <- t.test(PSI~1,Suspension_Coil,mu=base,subset=Suspension_Coil["Manufacturing_Lot"]=="Lot1")
+t.test(PSI~1,Suspension_Coil,mu=base,subset=Suspension_Coil["Manufacturing_Lot"]=="Lot1")
 
 
 # lot 2
-lot2_table <- t.test(PSI~1,coil,mu=standard,subset=coil["Manufacturing_Lot"]=="Lot2")
+t.test(PSI~1,Suspension_Coil,mu=base,subset=Suspension_Coil["Manufacturing_Lot"]=="Lot2")
 
 
 #lot 3
-lot3_table <- t.test(PSI~1,Suspension_Coil,mu=standard,subset=Suspension_Coil["Manufacturing_Lot"]=="Lot3")
+t.test(PSI~1,Suspension_Coil,mu=base,subset=Suspension_Coil["Manufacturing_Lot"]=="Lot3")
+
 
 
 
